@@ -281,4 +281,175 @@ public static void calculate(double temp, double speed) {
 	System.out.println(ress);
 	}
 }	
+
+
+/*********************************************************************************************************
+ * 
+ */
+
+//II]: ALGORITHM PROGRAM//// 
+
+//1: An Anagram Detection Example
+
+	public static void anagramm()
+	{  System.out.println("ENTER THE 1ST STRING=");
+		String s1=s.nextLine();
+		System.out.println("ENTER THE 2ND STRING=");
+		String s2=s.nextLine();
+		
+		int l1=s1.length();
+		int l2=s2.length();
+		int i=0;int j=0;
+		 
+		if(l1!=l2)
+		{System.out.println("Length is not equal");
+		System.out.println("BOTH STRING ARE NOT ANAGRAM");
+		}
+		char s11[]=s1.toCharArray();
+		char s22[]=s2.toCharArray();
+		
+		for( i=0;i<l1;i++)
+		{
+			for( j=i+1;j<l2;j++)
+			{
+				char temp;
+				if(s11[i]>s11[j])
+				{
+					temp=s11[i];
+					s11[i]=s11[j];
+					s11[j]=temp;					
+			    }
+			
+			    if(s22[i]>s22[j])
+			    {   
+				temp=s22[i];
+				s22[i]=s22[j];
+				s22[j]=temp;
+			     }
+		     }
+	   }
+		
+			if(s1!=s2)
+		     {
+			System.out.println("string are not angram");
+		      }
+		     else
+		     {
+			   System.out.println("string are anagram");
+		      }
+			}
+	
+/************************************************************************************************************
+ * 	
+ */
+	//2:binary Search
+
+	public static int binary_search(String a[],String s1)
+	{
+		int high=5;
+		int low=0;
+		int mid = 0;
+		
+		while(low<=high)
+	{	
+			mid=(high+low)/2;
+			
+			int res=(a[mid].compareTo(s1));
+			if(a[mid].equals(s1))
+			
+				return mid;
+			else if(res<0)
+			
+			low=mid+1;
+				
+			else
+			
+				high=mid-1;
+	}
+		return mid;
+	}
+	/*****************************************************************************************************
+	 * 
+	 */
+	//3:Bubble Sort 
+
+
+	public static void bubbleSort(int[] a, int l) {
+		// TODO Auto-generated method stub
+		//here we have to use 2 loop
+		//
+		for(int j=0;j<l;j++)
+		{
+			for(int k=0;k<l-1;k++)
+			{
+				if(a[k]>a[k+1])
+				{
+					int t;
+					t=a[k];
+					a[k]=a[k+1];
+					a[k+1]=t;
+				}
+			}
+		}
+		for(int k=0;k<=l-1;k++)
+		{
+			System.out.println("sorting integer elements are="+a[k]);
+		}
+	}
+
+/****************************************************************************************
+ * 
+ */
+	// 4:Insertion Sort
+	public static void sort(int arr[],int l)
+	{for(int i=1;i<l;i++)
+	{
+		int value=arr[i];//2 pass to the value
+		int j=i-1;
+		while(j>=0 && arr[j]>value )//6>2
+		{
+			arr[j+1]=arr[j];//move 6 
+			//at index 1
+			j--;
+			
+		}arr[j+1]=value;
+		
+	}
+	for(int i:arr)
+	{
+		System.out.println("sorted Array="+i+",");
+	}
+	
+	
+	}
+	/***************************************************************************************************
+	 * 
+	 */
+	//5:Prime No
+		public static void prime_no() {
+		// TODO Auto-generated method stub
+
+		System.out.println("1st value for prime");
+		int f=s.nextInt();
+		System.out.println("2nd value for prime");
+		int l=s.nextInt();
+		int i;int j;
+		
+		for(i=f;i<=l;i++)
+		{
+			for(j=2;j<=l;j++)
+			{
+				if(i%j==0)
+				{
+					break;
+				}
+			}
+			if(i==j)
+			{
+				System.out.println("prime No are:="+i);
+			
+			}
+		}
+		
+	}
 }
