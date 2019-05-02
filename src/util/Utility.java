@@ -452,4 +452,33 @@ public static void calculate(double temp, double speed) {
 		}
 		
 	}
+		/************************************************************************************************************
+		 * 
+		 */
+	//11::dayOfWeek 
+		public static int DayOfWeek(int m, int y, int d) {
+			// TODO Auto-generated method stub
+			int y0,x,m0,d0;
+			y0 = y- (14-m) / 12;
+			x = y0 + y0/4 -y0/100 + y0/400;
+			m0 = m + 12 *((14-m) / 12)-2;
+		return	d0 = (d + x + 31* m0 / 12) % 7;
+
+		}
+		/******************************************************************************************
+		 * 
+		 */
+		//12::temperaturConversion 
+
+    public static double CelsiusTemp(double FahrenheitTemp) {
+			// TODO Auto-generated method stub
+    	return(FahrenheitTemp * 9/5)+35;
+			
+		}
+	public static double fahrenheit(double fahrenheit) {
+			// TODO Auto-generated method stub
+		return(fahrenheit - 32)* 5/9;
+			
+		}
+		
 }
